@@ -21,4 +21,10 @@ buttonAdd.addEventListener('click', function(){
 })
 
 //exercicio 7
-
+tarefasOl.addEventListener('click', function(event){
+  if (event.target.style.backgroundColor === "rgb(128,128,128)") {
+    event.target.style.bacgroundColor = "rgb(255, 255, 255)";
+  } else {
+    event.target.style.backgroundColor = "rgb(128,128,128)";
+  }
+})
