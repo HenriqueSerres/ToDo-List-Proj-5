@@ -14,17 +14,25 @@ const inputtList = document.getElementById('texto-tarefa');
 buttonAdd.addEventListener('click', function(){
   let tarefas = inputtList.value;
   let tarefasLi = document.createElement('li');
-  tarefasLi.className = 'ordenaLi';
   tarefasLi.innerText = tarefas;
   inputtList.value = "";
   tarefasOl.appendChild(tarefasLi);
 })
 
-//exercicio 7
-tarefasOl.addEventListener('click', function(event){
-  if (event.target.style.backgroundColor === "rgb(128,128,128)") {
-    event.target.style.bacgroundColor = "rgb(255, 255, 255)";
-  } else {
-    event.target.style.backgroundColor = "rgb(128,128,128)";
+//exercicio 7 e 8
+// tarefasOl.addEventListener('click', function(event){
+//   if (event.target.style.backgroundColor === "rgb(128,128,128)") {
+//     event.target.style.backgroundColor = "rgb(255, 255, 255)";
+//   } else {
+//     event.target.style.backgroundColor = "red";
+//   }
+// })
+const listaTarefas = document.querySelector('ol');
+function selectLi(event){
+  let select = document.querySelector('.selected');
+  if (select) {
+   select.classList.remove("selected");
   }
-})
+  event.target.classList.add("selected");
+}
+listaTarefas.addEventListener('click', selectLi);
