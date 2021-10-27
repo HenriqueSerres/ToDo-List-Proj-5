@@ -20,13 +20,7 @@ buttonAdd.addEventListener('click', function(){
 })
 
 //exercicio 7 e 8
-// tarefasOl.addEventListener('click', function(event){
-//   if (event.target.style.backgroundColor === "rgb(128,128,128)") {
-//     event.target.style.backgroundColor = "rgb(255, 255, 255)";
-//   } else {
-//     event.target.style.backgroundColor = "red";
-//   }
-// })
+
 const listaTarefas = document.querySelector('ol');
 function selectLi(event){
   let select = document.querySelector('.selected');
@@ -36,3 +30,13 @@ function selectLi(event){
   event.target.classList.add("selected");
 }
 listaTarefas.addEventListener('click', selectLi);
+
+//exercicio 9
+function riscaLi(event){
+  let riscado = document.querySelector('.completed');
+  if (riscado) {
+   riscado.classList.remove("completed");
+  } else if(!riscado)
+  event.target.classList.add("completed");
+}
+listaTarefas.addEventListener('dblclick', riscaLi);
