@@ -54,3 +54,5 @@ function cleanDone() {
   }
 }
 buttonDone.addEventListener('click', cleanDone);
+
+//fim dos requisitos obrigatórios.
