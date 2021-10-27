@@ -32,10 +32,9 @@ function selectLi(event) {
 }
 listaTarefas.addEventListener('click', selectLi);
 
-//exercicio 9
+//exercicio 9 (toggle visto no)
 const riscado = document.querySelector('.completed');
-function riscaLi(event) {
- 
+function riscaLi(event) { 
     event.target.classList.toggle("completed");
 }
 listaTarefas.addEventListener('dblclick', riscaLi);
@@ -53,6 +52,5 @@ function cleanDone() {
   for (let li of riscadoA){
     li.remove();
   }
-//console.log('alo');
 }
 buttonDone.addEventListener('click', cleanDone);
