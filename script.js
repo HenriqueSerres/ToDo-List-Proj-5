@@ -9,6 +9,7 @@ listaOrdenada();
 
 //exercicio 5 e 6
 const buttonAdd = document.querySelector('#criar-tarefa');
+const buttonClean = document.getElementById('apaga-tudo');
 const tarefasOl = document.getElementById('lista-tarefas');
 const inputtList = document.getElementById('texto-tarefa');
 buttonAdd.addEventListener('click', function(){
@@ -40,3 +41,16 @@ function riscaLi(event){
   event.target.classList.add("completed");
 }
 listaTarefas.addEventListener('dblclick', riscaLi);
+
+//exercicio 10
+const takeLi = document.getElementsByTagName('li');
+// buttonClean.addEventListener('click', function(){  
+//   takeLi.value;
+//   listaTarefas.appendChild(takeLi);
+// });
+function cleanTasks(){
+
+    listaTarefas.innerHTML = '';
+  }
+
+buttonClean.addEventListener('click', cleanTasks);
